@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const SearchBar = (props) => {
+function SearchBar(props) {
+    const [searchTerm, setSearchTerm] = useState('');
+    const onSearchChange = (e) => setSearchTerm(e.target.value);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        props.onSearch(searchTerm);
+        e.currentTarget.reset();
+    };
     return (
-        <div className="search-input-wrapper">
-            <input
-            onChange={props.handleInputChange}
-            value={props.search}
+        <form className="search-form" onSubmit={handleSubmit}>
+            <label className="label" htmlFor="search">Search</label>
+            <input type="text"
+            onChange={onSearchChange}
             name="search"
-            type="text"
-            className="form-control"
             placeholder="Search for a Gif"
-            id="search"
             />
-            <button onClick={props.handleFormSubmit} className="search-button">
+            <button type="submit" onClick={props.handleFormSubmit} className="search-button">
             Search
             </button>
-        </div>
+        </form>
 
-    )
+    );
 }
 
 export default SearchBar
