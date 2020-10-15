@@ -10,14 +10,14 @@ function SearchBar(props) {
     };
     return (
         <form className="search-form" onSubmit={handleSubmit}>
-            <label className="label" htmlFor="search">Search</label>
+            <label className="label" htmlFor="search"></label>
             <input type="text"
             onChange={onSearchChange}
             name="search"
             placeholder="Search for a Gif"
             />
-            <button type="submit" onClick={props.handleFormSubmit} className="search-button">
-            Search
+            <button type="submit" onClick={props.handleFormSubmit} className="search-button" >
+            <i class="fa fa-search fa-lg"></i>
             </button>
         </form>
 

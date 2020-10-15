@@ -19,20 +19,38 @@ code {
   align-items: center;
   overflow: hidden;
 }
+
 .main {
   background: #fff;
   width: 60%;
   margin: auto;
+  padding: 20px;
   
 }
 
+/* form {
+  font-family: 'Comfortaa', cursive;
+} */
+
+input {
+  font-family: 'Comfortaa', cursive;
+  padding: 8px;
+  margin: 5px;
+  width: 300px;
+}
+
+button {
+  padding: 8px;
+  margin: 5px;
+}
+
 .gif-container {
-  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background: #fff;
   width: 60%;
   margin: auto;
+  padding: 20px;
 
 }
